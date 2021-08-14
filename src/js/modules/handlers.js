@@ -1,4 +1,5 @@
 import popups from "./popups";
+import worksFilter from "./worksFilter";
 
 const handlers = () => {
   let showPopupGift = true;
@@ -37,6 +38,11 @@ const handlers = () => {
     ) {
       showPopupGift = false;
       popups(target.closest("[data-modal]"), false);
+    }
+
+    // Filter portfolio works
+    if (target.parentNode.classList.contains("portfolio-menu")) {
+      worksFilter(target.parentNode, target.className);
     }
   });
 };
