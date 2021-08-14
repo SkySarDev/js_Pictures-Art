@@ -12,11 +12,11 @@ const sliders = (slidesSel, options) => {
     }
 
     slides.forEach((slide) => {
-      slide.classList.add("animated", "hidden");
+      slide.classList.add("animated", "hide");
       slide.classList.remove("slideInLeft", "slideInRight");
     });
 
-    slides[slideIndex].classList.remove("hidden");
+    slides[slideIndex].classList.remove("hide");
     slides[slideIndex].classList.add(animationClass);
   };
   swipe();
