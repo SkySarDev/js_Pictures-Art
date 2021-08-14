@@ -1739,6 +1739,9 @@ h4 {
   }
 }
 
+.show-popup {
+  display: block;
+}
 .hidden {
   display: none;
 }
