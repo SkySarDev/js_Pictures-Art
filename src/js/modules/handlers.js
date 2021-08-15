@@ -1,6 +1,7 @@
 import popups from "./popups";
 import worksFilter from "./worksFilter";
 import showMoreStyles from "./showMoreStyles";
+import accordion from "./accordion";
 
 const handlers = () => {
   const burgerMenu = document.querySelector(".burger-menu");
@@ -62,6 +63,11 @@ const handlers = () => {
     // Burger menu
     if (target.closest(".burger") && window.screen.availWidth <= 992) {
       burgerMenu.classList.toggle("show");
+    }
+
+    // Accordion
+    if (target.parentNode.classList.contains("accordion-heading")) {
+      accordion(target.parentNode);
     }
   });
 };
