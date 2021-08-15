@@ -755,6 +755,7 @@ h4 {
   position: absolute;
   text-align: center;
   width: 100%;
+  pointer-events: none;
 }
 .sizes-block .size {
   top: 3rem;
@@ -1739,10 +1740,4 @@ h4 {
     padding: 3rem 3rem;
     width: 25rem;
   }
-}
-.show {
-  display: block;
-}
-.hide {
-  display: none;
 }
