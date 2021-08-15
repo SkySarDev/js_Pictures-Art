@@ -3,6 +3,7 @@ import worksFilter from "./worksFilter";
 import showMoreStyles from "./showMoreStyles";
 
 const handlers = () => {
+  const burgerMenu = document.querySelector(".burger-menu");
   let showPopupGift = true;
 
   window.addEventListener("scroll", () => {
@@ -14,6 +15,12 @@ const handlers = () => {
       showPopupGift = false;
       popups(document.querySelector(".popup-gift"), true);
       document.querySelector(".fixed-gift").style.display = "none";
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.screen.availWidth > 992) {
+      burgerMenu.classList.remove("show");
     }
   });
 
@@ -50,6 +57,11 @@ const handlers = () => {
     if (target.classList.contains("button-transparent")) {
       target.classList.add("hide");
       showMoreStyles();
+    }
+
+    // Burger menu
+    if (target.closest(".burger") && window.screen.availWidth <= 992) {
+      burgerMenu.classList.toggle("show");
     }
   });
 };
