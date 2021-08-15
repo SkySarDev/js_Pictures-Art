@@ -16,6 +16,7 @@ import popups from "./modules/popups";
 import pictureSizes from "./modules/pictureSizes";
 import validations from "./modules/validations";
 import phoneMask from "./modules/phoneMask";
+import calculator from "./modules/calculator";
 
 const startConsultInterval = () => {
   const isModalShow = Array.from(
@@ -34,6 +35,7 @@ handlers();
 pictureSizes();
 validations();
 phoneMask('input[name="phone"]');
+calculator();
 
 sliders(".main-slider-item", {
   autoSwipe: 4000,

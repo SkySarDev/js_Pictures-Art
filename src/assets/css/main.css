@@ -334,6 +334,11 @@ h4 {
   text-align: center;
   margin-top: 9rem;
 }
+@media (max-width: 575px) {
+  .main .p-heading-italic {
+    margin-top: 3rem;
+  }
+}
 .main h1 {
   margin: 3rem 0 7rem 0;
   text-align: center;
@@ -522,6 +527,9 @@ h4 {
   display: block;
   font-size: 1.9rem;
   padding: 2rem 0;
+  width: 300px;
+  text-align: center;
+  background-color: transparent;
 }
 .calc .promocode {
   opacity: 0.6;
@@ -561,13 +569,12 @@ h4 {
   /* example */
 
   height: 4em;
+  text-align: center;
   /* example */
 
   line-height: 2em /* the same as height */;
 }
 .calc .file_upload > button {
-  float: right;
-  width: 8em;
   /* example */
 
   height: 100%;
@@ -1752,4 +1759,12 @@ h4 {
     padding: 3rem 3rem;
     width: 25rem;
   }
+}
+button[disabled] {
+  opacity: 0.5;
+}
+.file-not-selected {
+  font-size: 1em;
+  line-height: 2em;
+  text-align: center;
 }
