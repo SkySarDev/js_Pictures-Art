@@ -14,6 +14,8 @@ import "../assets/img/sizes-4-1.png";
 import handlers from "./modules/handlers";
 import popups from "./modules/popups";
 import pictureSizes from "./modules/pictureSizes";
+import validations from "./modules/validations";
+import phoneMask from "./modules/phoneMask";
 
 const startConsultInterval = () => {
   const isModalShow = Array.from(
@@ -30,6 +32,8 @@ setTimeout(startConsultInterval, 60000);
 
 handlers();
 pictureSizes();
+validations();
+phoneMask('input[name="phone"]');
 
 sliders(".main-slider-item", {
   autoSwipe: 4000,
