@@ -1,5 +1,6 @@
 import popups from "./popups";
 import worksFilter from "./worksFilter";
+import showMoreStyles from "./showMoreStyles";
 
 const handlers = () => {
   let showPopupGift = true;
@@ -43,6 +44,12 @@ const handlers = () => {
     // Filter portfolio works
     if (target.parentNode.classList.contains("portfolio-menu")) {
       worksFilter(target.parentNode, target.className);
+    }
+
+    // Show more styles
+    if (target.classList.contains("button-transparent")) {
+      target.classList.add("hide");
+      showMoreStyles();
     }
   });
 };
