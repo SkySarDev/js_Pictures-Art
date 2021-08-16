@@ -63,7 +63,7 @@ module.exports = {
   target: "web",
   devtool: "source-map",
   devServer: {
-    open: false,
+    open: true,
     port: 3000,
     hot: true,
     writeToDisk: false,
