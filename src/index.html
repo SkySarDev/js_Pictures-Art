@@ -82,9 +82,9 @@
 				<div class="col-md-3 col-md-offset-3 col-sm-offset-0 col-sm-4 hidden-xs">
 					<div class=file_upload>
 						<button type=button>Загрузить фотографию</button>
-						<div>Файл не выбран</div>
-						<input type=file name=upload>
+						<input type=file name=upload data-file-name="header-file-name">
 					</div>
+					<div class="file-name header-file-name">Файл не выбран</div>
 					<p class=email>E-mail: <a href=mailto:info@kartiny.art>info@kartiny.art</a></p>
 				</div>
 				<div class="col-md-3 col-sm-4 col-xs-7">
@@ -233,9 +233,9 @@
 						<h4>Загрузите свое фото</h4>
 						<div class=file_upload>
 							<button type=button>Загрузить фотографию</button>
-							<input id="calc-upload" type=file name=upload>
+							<input id="calc-upload" type=file name=upload data-file-name="calc-file-name">
 						</div>
-						<div class="file-not-selected">Файл не выбран</div>
+						<div class="file-name calc-file-name">Файл не выбран</div>
 						<select id=size>
 							<option value="">Выберите размер картины</option>
 							<option value="1.25">40x50</option>
@@ -256,7 +256,7 @@
 							<option value="1.75">Доставка готовых работ </option>
 						</select>
 						<input type="text" class="promocode" placeholder="Введите ваш промокод">
-						<div class=calc-price data-orig-msg="Для расчета нужно выбрать размер картины и материал картины">Для расчета нужно выбрать размер картины и материал картины</div>
+						<div class=calc-price data-default-msg="Для расчета нужно выбрать размер картины и материал картины">Для расчета нужно выбрать размер картины и материал картины</div>
 						<button class="button button-order" disabled>Быстрый заказ</button>
 					</form>
 				</div>
@@ -596,10 +596,10 @@
 			<div class="col-md-10 col-md-offset-1">
 				<form action=# method=POST>
 					<div class=input-wrapper>
-						<input type=text name=name placeholder="Ваше имя" required>
-						<input type=text name=phone placeholder="Ваш телефон" required>
-						<input type=text name=email placeholder="Ваш E-mail">
-						<input class=input-text name=message type=text placeholder="Задайте ваш вопрос здесь" required>
+						<input type=text name=name placeholder="Ваше имя" required autocomplete="off">
+						<input type=text name=phone placeholder="Ваш телефон" required autocomplete="off">
+						<input type=text name=email placeholder="Ваш E-mail" required autocomplete="off">
+						<input class=input-text name=message type=text placeholder="Задайте ваш вопрос здесь" required autocomplete="off">
 					</div>
 					<button class="button button-order">Получить консультацию</button>
 				</form>
@@ -664,8 +664,8 @@
 				<h4>Остались вопросы? Закажите обратный звонок</h4>
 				<div class=main-form>
 					<form class=form action=# method=POST>
-						<input type=text name=name placeholder="Ваше имя" required>
-						<input type=text name=phone placeholder="Ваш телефон" required>
+						<input type=text name=name placeholder="Ваше имя" required autocomplete="off">
+						<input type=text name=phone placeholder="Ваш телефон" required autocomplete="off">
 						<button class="button button-order">Получить консультацию</button>
 					</form>
 				</div>
@@ -690,15 +690,15 @@
 					<h4>Заказать дизайн портрета</h4>
 					<div class=file_upload>
 						<button type=button>Загрузить фотографию</button>
-						<div>Файл не выбран</div>
-						<input type=file name=upload>
+						<input type=file name=upload data-file-name="popup-file-name">
 					</div>
+					<div class="file-name popup-file-name">Файл не выбран</div>
 					<div class=main-form>
 						<div class=form>
-							<input type=text name=name placeholder="Ваше имя" required>
-							<input type=text name=phone placeholder="Ваш телефон" required>
-							<input type=text name=email placeholder="Ваш e-mail">
-							<textarea name=message placeholder=Комментарий rows=2></textarea>
+							<input type=text name=name placeholder="Ваше имя" required autocomplete="off">
+							<input type=text name=phone placeholder="Ваш телефон" required autocomplete="off">
+							<input type=text name=email placeholder="Ваш e-mail" required autocomplete="off">
+							<textarea name=message placeholder=Комментарий rows=2 required autocomplete="off"></textarea>
 							<button class="button button-order">Отправить дизайнеру</button>
 						</div>
 					</div>

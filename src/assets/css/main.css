@@ -231,8 +231,7 @@ h4 {
   line-height: 2em /* the same as height */;
 }
 .main .file_upload > button {
-  float: right;
-  width: 8em;
+  width: 100%;
   /* example */
 
   height: 100%;
@@ -1191,8 +1190,7 @@ h4 {
   line-height: 2em /* the same as height */;
 }
 .popup-design .file_upload > button {
-  float: right;
-  width: 8em;
+  width: 100%;
   /* example */
 
   height: 100%;
@@ -1763,7 +1761,7 @@ h4 {
 button[disabled] {
   opacity: 0.5;
 }
-.file-not-selected {
+.file-name {
   font-size: 1em;
   line-height: 2em;
   text-align: center;

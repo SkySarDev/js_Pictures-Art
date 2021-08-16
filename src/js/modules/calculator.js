@@ -7,16 +7,11 @@ const calculator = () => {
   const calcPrice = document.querySelector(".calc-price");
   const calcForm = document.querySelector(".calc_form");
   const calcButton = calcForm.querySelector(".button-order");
-  const fileNotSelected = calcForm.querySelector(".file-not-selected");
   const startPrice = 1000;
 
   let currentPrice;
 
   const calc = () => {
-    if (calcUpload.value !== "") {
-      fileNotSelected.classList.add("hide");
-    }
-
     if (size.value !== "" && material.value !== "") {
       const optionsValue = options.value || 1;
       currentPrice = startPrice * size.value * material.value * optionsValue;
@@ -31,7 +26,7 @@ const calculator = () => {
         calcButton.disabled = false;
       }
     } else {
-      calcPrice.textContent = calcPrice.dataset.origMsg;
+      calcPrice.textContent = calcPrice.dataset.defaultMsg;
       calcButton.disabled = true;
     }
   };

@@ -1,3 +1,5 @@
+import fileUpload from "./fileUpload";
+
 const validations = () => {
   const regexp = new Map([
     ["name", /[^ а-яё]/i],
@@ -11,6 +13,10 @@ const validations = () => {
 
     if (name && regexp.has(name)) {
       target.value = target.value.replace(regexp.get(name), "");
+    }
+
+    if (name === "upload") {
+      fileUpload(target);
     }
   });
 };
