@@ -10,6 +10,9 @@ import "../assets/img/sizes-1-1.png";
 import "../assets/img/sizes-2-1.png";
 import "../assets/img/sizes-3-1.png";
 import "../assets/img/sizes-4-1.png";
+import "../assets/img/spinner.gif";
+import "../assets/img/ok.png";
+import "../assets/img/fail.png";
 
 import handlers from "./modules/handlers";
 import popups from "./modules/popups";

@@ -2,6 +2,7 @@ import popups from "./popups";
 import worksFilter from "./worksFilter";
 import showMoreStyles from "./showMoreStyles";
 import accordion from "./accordion";
+import sendForm from "./sendForm";
 
 const handlers = () => {
   const burgerMenu = document.querySelector(".burger-menu");
@@ -23,6 +24,11 @@ const handlers = () => {
     if (window.screen.availWidth > 992) {
       burgerMenu.classList.remove("show");
     }
+  });
+
+  document.addEventListener("submit", (e) => {
+    e.preventDefault();
+    sendForm(e.target);
   });
 
   document.addEventListener("click", (e) => {
