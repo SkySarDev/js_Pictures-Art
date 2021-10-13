@@ -3,7 +3,7 @@
 Landing for company that create paintings from photographs
 
 ### **Demo**
-https://skysar.site/pictures-art/
+https://skysar.site/demo/pictures-art/
 
 ### **Commands**
 
